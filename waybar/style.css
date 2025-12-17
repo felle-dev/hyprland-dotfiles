@@ -11,9 +11,8 @@
 window#waybar {
     background: #1e1e2e;
     color: #e0def4;
-    border-radius: 6px;
     padding: 3px 6px;
-    margin: 3px 3px;
+    margin: 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -44,8 +43,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
     color: #cba6f7;
-    background: rgba(120, 120, 170, 0.4);
-    font-weight: 600;
+    background: black;
 }
 
 #workspaces button.urgent {

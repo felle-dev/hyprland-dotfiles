@@ -47,7 +47,7 @@ def get_weather():
         wind_speed = data['wind']['speed']
         
         # Format output
-        text = f"{icon} {temp}°C"
+        text = f"{icon} {temp}°C •"
         tooltip = f"{description}\n"
         tooltip += f"Temperature: {temp}°C\n"
         tooltip += f"Feels like: {feels_like}°C\n"

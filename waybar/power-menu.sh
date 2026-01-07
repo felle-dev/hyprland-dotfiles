@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # power-menu.sh with custom styling
 
 entries=" Shutdown\n󰜉 Reboot\n󰒲 Suspend\n Lock\n Logout"

@@ -33,12 +33,13 @@ window#waybar.hidden {
     color: #7f849c;
     background: transparent;
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: 0px;
     transition: all 0.2s ease-in-out;
 }
 
 #workspaces button:hover {
-    opacity: 0.7;
+    background: white;
+    color: #1e1e2e;
 }
 
 #workspaces button.active {

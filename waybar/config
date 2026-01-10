@@ -4,11 +4,11 @@
   "position": "top",
   "height": 25,
   "spacing": 1,
-  "margin-top": 0,
-  "margin-left": 0,
-  "margin-right": 0,
+  "margin-top": 5,
+  "margin-left": 5,
+  "margin-right": 5,
   "modules-left": ["hyprland/workspaces","hyprland/window"],
-  "modules-center": ["custom/weather","clock"],
+  "modules-center": ["clock"],
   "modules-right": ["backlight","pulseaudio","bluetooth","battery","network","custom/torstatus","custom/vpn","memory","custom/cpugraph","tray","custom/power"],
 
   "custom/weather": {

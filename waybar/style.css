@@ -25,7 +25,6 @@ window#waybar.hidden {
 /* === Workspaces === */
 #workspaces {
     background: #1e1e2e;
-    border-radius: 4px;
     padding: 1px;
 }
 
@@ -43,8 +42,13 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-    color: #cba6f7;
     background: black;
+    color: white;
+}
+
+#workspaces button.active:hover {
+    background: white;
+    color: #1e1e2e;
 }
 
 #workspaces button.urgent {

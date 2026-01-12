@@ -1,19 +1,14 @@
 style = ~/.config/wofi/menu.css
 
+show=drun
 width=500
 height=500
-dynamic_lines=false
-halign=fill
-location=center
-show=drun
-prompt=Apps
-filter_rate=100
-allow_markup=true
-no_actions=true
-halign=fill
-orientation=vertical
-content_halign=fill
+always_parse_args=true
+show_all=false
+print_command=true
 insensitive=true
+prompt= けんさく
 allow_images=true
 image_size=40
 gtk_dark=true
+no_actions=true

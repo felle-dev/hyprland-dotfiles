@@ -1,49 +1,75 @@
-/* === Wofi Menu - Matching Waybar Theme === */
+@define-color primary #cba6f7;
+@define-color secondary #313244;
+@define-color background #1e1e2e;
+@define-color surface #313244;
+@define-color on-primary #1e1e2e;
+@define-color on-secondary #cdd6f4;
+@define-color on-background #cdd6f4;
+@define-color on-surface #cdd6f4;
 
-window {
-    margin: 0px;
-    border: 1px solid rgba(150, 150, 180, 0.25);
-    background-color: #1e1e2e;
-    border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-    width: 500px;
-    height: 500px;
-}
-
-#input {
-    padding: 6px 8px;
-    margin: 6px;
-    border: none;
-    border-radius: 4px;
-    color: #cdd6f4;
-    font-weight: 600;
-    background-color: rgba(40, 40, 55, 0.7);
-    outline: none;
+* {
     font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
     font-size: 13px;
 }
 
-#input:focus {
-    border: 1px solid #cba6f7;
-    background-color: rgba(203, 166, 247, 0.1);
+*:selected {
+    color: @on-primary;
+    background-color: @primary;
 }
 
+/* Window */
+window {
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid rgba(150, 150, 180, 0.25);
+    border-radius: 6px;
+    background-color: @background;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    height: 500px;
+    animation: slideIn 0.5s ease-in-out both;
+}
+
+/* Slide In */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Inner Box */
 #inner-box {
     margin: 6px;
     padding: 4px;
     border: none;
-    color: #cdd6f4;
-    font-weight: 500;
+    color: @on-background;
     background-color: transparent;
     min-height: 440px;
+    animation: fadeIn 0.5s ease-in-out both;
 }
 
+/* Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Outer Box */
 #outer-box {
     margin: 0px;
     padding: 0px;
-    background-color: #1e1e2e;
+    background-color: @background;
 }
 
+/* Scroll */
 #scroll {
     margin: 0px;
     border: none;
@@ -51,21 +77,43 @@ window {
     min-width: 480px;
 }
 
-#img {
-    margin-right: 10px;
-    padding: 2px;
-}
-
-#text {
-    color: #cdd6f4;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-#text:selected {
-    color: #1e1e2e;
+/* Input */
+#input {
+    padding: 6px 8px;
+    margin: 6px;
+    border: none;
+    border-radius: 4px;
+    color: @on-background;
     font-weight: 600;
+    background-color: rgba(40, 40, 55, 0.7);
+    outline: none;
+    animation: fadeIn 0.5s ease-in-out both;
+}
+
+#input:focus {
+    border: 1px solid @primary;
+    background-color: rgba(203, 166, 247, 0.1);
+}
+
+/* Text */
+#text {
+    color: @on-surface;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease-in-out both;
+}
+
+/* Selected Entry */
+#entry:selected {
+    background-color: @primary;
+    border-radius: 4px;
+}
+
+#entry:selected #text {
+    color: @on-primary;
+}
+
+#entry:hover {
+    background-color: rgba(120, 120, 170, 0.2);
 }
 
 #entry {
@@ -78,15 +126,12 @@ window {
     min-height: 48px;
 }
 
-#entry:hover {
-    background-color: rgba(120, 120, 170, 0.2);
+#img {
+    margin-right: 10px;
+    padding: 2px;
 }
 
-#entry:selected {
-    background-color: #cba6f7;
-    border-radius: 4px;
-}
-
-#entry:selected #img {
+#img:selected {
     background-color: transparent;
 }
+

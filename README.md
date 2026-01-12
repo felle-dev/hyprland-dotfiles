@@ -7,7 +7,7 @@ My personal Hyprland/Wayland config. Minimal, functional, and built for daily us
 ## Setup
 1. Clone this repo to `~/.config/`.
 2. Install [Hyprland](https://hyprland.org/) and required dependencies.
-3. **Add your wallpaper:** Create `~/.config/hypr/general_random/` and place your wallpaper(s) inside.
+3. **Add your wallpaper:** Create `~/.config/hypr/general_random/ or ~/.config/hypr/anime_random` and place your wallpaper(s) inside.
 4. **Install a Nerd Font** for Waybar icons to display properly (e.g., JetBrainsMono Nerd Font).
 5. Relogin or restart your session.
 

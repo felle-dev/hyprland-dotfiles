@@ -1,78 +1,93 @@
-/* === Power Menu Style - Distinct from Main Wofi === */
+@define-color primary #f38ba8;
+@define-color secondary #313244;
+@define-color background #1e1e2e;
+@define-color surface #313244;
+@define-color on-primary #1e1e2e;
+@define-color on-secondary #cdd6f4;
+@define-color on-background #cdd6f4;
+@define-color on-surface #cdd6f4;
 
-window {
-    margin: 0px;
-    border: 2px solid #f38ba8;
-    background-color: #1e1e2e;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(243, 139, 168, 0.3);
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: 14px;
 }
 
+*:selected {
+    color: @on-primary;
+    background-color: @primary;
+}
+
+/* Window */
+window {
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid @primary;
+    background-color: @background;
+    width: 500px;
+    height: 500px;
+}
+
+/* Inner Box */
+#inner-box {
+    margin: 8px;
+    border: none;
+    color: @on-background;
+    background-color: transparent;
+}
+
+/* Outer Box */
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    background-color: @background;
+}
+
+/* Scroll */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+/* Input */
 #input {
     padding: 8px 12px;
     margin: 8px;
     border: none;
-    border-radius: 6px;
-    color: #f38ba8;
+    color: @primary;
     font-weight: bold;
     background-color: rgba(243, 139, 168, 0.15);
     outline: none;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
 }
 
 #input:focus {
     background-color: rgba(243, 139, 168, 0.2);
 }
 
-#inner-box {
-    margin: 8px;
-    border: none;
-    color: #cdd6f4;
-    font-weight: 600;
-    background-color: transparent;
-}
-
-#outer-box {
-    margin: 0px;
-    padding: 0px;
-    background-color: #1e1e2e;
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
-}
-
+/* Text */
 #text {
-    color: #cdd6f4;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
-    font-weight: 600;
+    color: @on-surface;
 }
 
 #text:selected {
-    color: #1e1e2e;
+    color: @on-primary;
     font-weight: bold;
 }
 
+/* Entry */
 #entry {
     margin: 4px 8px;
     padding: 8px 12px;
-    border: 1px solid transparent;
-    border-radius: 6px;
     background-color: rgba(30, 30, 46, 0.5);
-    transition: all 0s ease-in-out;
 }
 
 #entry:hover {
     background-color: rgba(243, 139, 168, 0.3);
-    border-color: #f38ba8;
-    transform: translateX(4px);
+    border-color: @primary;
 }
 
 #entry:selected {
-    background-color: #f38ba8;
-    border-color: #f38ba8;
-    border-radius: 6px;
+    background-color: @primary;
+    border-color: @primary;
 }
+

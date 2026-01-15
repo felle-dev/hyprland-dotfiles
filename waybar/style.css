@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: #1e1e2e;
+    background: transparent;
     color: #e0def4;
     padding: 3px 6px;
     margin: 0;
@@ -61,8 +61,8 @@ window#waybar.hidden {
 #window {
     background: #1e1e2e;
     color: #cdd6f4;
-    border-radius: 4px;
-    padding: 2px 8px;
+    border-radius: 10px;
+    padding: 2px 12px;
     margin: 0;
     font-weight: 500;
 }
@@ -78,9 +78,9 @@ window#waybar.hidden {
 
 #clock, #custom-weather {
     background: #1e1e2e;
-    border-radius: 4px;
+    border-radius: 10px;
     color: white;
-    padding: 2px 6px;
+    padding: 2px 12px;
     font-weight: 600;
 }
 
@@ -99,8 +99,8 @@ window#waybar.hidden {
 #custom-internetspeed,
 #tray {
     background: #1e1e2e;
-    border-radius: 4px;
-    padding: 2px 6px;
+    border-radius: 10px;
+    padding: 2px 12px;
     margin-left: 0px;
     transition: all 0.2s ease-in-out;
 }

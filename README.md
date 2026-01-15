@@ -15,6 +15,7 @@ My personal Hyprland/Wayland config. Minimal, functional, and built for daily us
 - **Waybar, Kitty, and Wofi** configs are included.
 - **No cache or personal app data** is tracked (see `.gitignore`).
 - **External configurations** like VPN, Tor, and similar services are **not included** and must be configured separately by you.
+- **Dependencies** some configurations might need some program to be installed but i just forgot (sowwy).
 - Configured and tested on a **ThinkPad X220**.
 
 **License:** GPL-3.0. Use, modify, and share freely.

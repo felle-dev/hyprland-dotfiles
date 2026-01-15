@@ -240,13 +240,13 @@ else:
 
 # Determine status
 if tor_connected:
-    icon = ""
+    icon = " "
     text = "TOR"
     status_class = "tor-active"
     tooltip = "🔒 Tor network is active\n✅ Your traffic is anonymized\n🌐 Proxy enabled"
     current_status = "connected"
 elif tor_service and bootstrap_percent > 0:
-    icon = ""
+    icon = " "
     text = f"{bootstrap_percent}%"
     status_class = "tor-connecting"
     tooltip = f"🔄 Tor is connecting...\n📊 Bootstrap: {bootstrap_percent}%"
@@ -258,7 +258,7 @@ elif tor_service:
     tooltip = "⏳ Tor service is starting..."
     current_status = "starting"
 else:
-    icon = "󱎛"
+    icon = "󱎛 "
     text = "OFF"
     status_class = "tor-off"
     tooltip = "🔓 Tor is not running\n🖱️ Click to start\n🌐 Direct connection"
@@ -269,7 +269,7 @@ save_state(current_status, bootstrap_percent, proxy_notified)
 
 # Format output
 output = {
-    "text": f"{icon} {text}",
+    "text": f"{icon}",
     "tooltip": tooltip,
     "class": status_class,
     "percentage": bootstrap_percent

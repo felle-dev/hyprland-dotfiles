@@ -25,14 +25,14 @@ window#waybar.hidden {
 /* === Workspaces === */
 #workspaces {
     background: #1e1e2e;
-    padding: 1px;
+    border-radius: 10px;
 }
 
 #workspaces button {
     color: #7f849c;
     background: transparent;
     padding: 2px 6px;
-    border-radius: 0px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
 }
 

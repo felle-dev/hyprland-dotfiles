@@ -96,6 +96,7 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "󰃟 ",
+    "tooltip-format": "{percent}%",
     "format-icons": ["󰃞", "󰃞", "󰃞", "󰃞", "󰃞", "󰃞", "󰃞", "󰃞", "󰃞"],
     "on-scroll-up": "brightnessctl set +5%",
     "on-scroll-down": "brightnessctl set 5%-"

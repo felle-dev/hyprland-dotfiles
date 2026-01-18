@@ -49,7 +49,7 @@ window {
     color: @on-background;
     background-color: transparent;
     min-height: 440px;
-    animation: fadeIn 0.5s ease-in-out both;
+    /* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 /* Fade In */
@@ -86,7 +86,7 @@ window {
     font-weight: 600;
     background-color: rgba(40, 40, 55, 0.7);
     outline: none;
-    animation: fadeIn 0.5s ease-in-out both;
+    /* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 #input:focus {
@@ -98,7 +98,7 @@ window {
 #text {
     color: @on-surface;
     font-weight: 500;
-    animation: fadeIn 0.5s ease-in-out both;
+    /* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 /* Entry */

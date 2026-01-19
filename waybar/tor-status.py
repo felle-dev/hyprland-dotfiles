@@ -121,7 +121,7 @@ def toggle_tor_service():
             subprocess.run(['sudo', 'systemctl', 'stop', 'tor'], timeout=5, check=True)
             if disable_proxy():
                 subprocess.run(
-                    ['notify-send', '-t', '3000', '-u', 'normal', '🔓 Tor Disabled', 'Proxy settings removed'],
+                    ['notify-send', '-t', '3000', '-u', 'normal', 'Tor Disabled', 'Proxy settings removed'],
                     capture_output=True
                 )
         else:
@@ -129,12 +129,12 @@ def toggle_tor_service():
             subprocess.run(['sudo', 'systemctl', 'start', 'tor'], timeout=5, check=True)
             if enable_proxy():
                 subprocess.run(
-                    ['notify-send', '-t', '3000', '-u', 'normal', '🔒 Tor Enabled', 'Proxy configured - restart apps to apply'],
+                    ['notify-send', '-t', '3000', '-u', 'normal', 'Tor Enabled', 'Proxy configured - restart apps to apply'],
                     capture_output=True
                 )
     except Exception as e:
         subprocess.run(
-            ['notify-send', '-t', '3000', '-u', 'critical', '❌ Tor Toggle Failed', str(e)],
+            ['notify-send', '-t', '3000', '-u', 'critical', 'Tor Toggle Failed', str(e)],
             capture_output=True
         )
 
@@ -243,25 +243,25 @@ if tor_connected:
     icon = " "
     text = "TOR"
     status_class = "tor-active"
-    tooltip = "🔒 Tor network is active\n✅ Your traffic is anonymized\n🌐 Proxy enabled"
+    tooltip = "Tor network is active\nYour traffic is anonymized\nProxy enabled"
     current_status = "connected"
 elif tor_service and bootstrap_percent > 0:
     icon = " "
     text = f"{bootstrap_percent}%"
     status_class = "tor-connecting"
-    tooltip = f"🔄 Tor is connecting...\n📊 Bootstrap: {bootstrap_percent}%"
+    tooltip = f"Tor is connecting...\nBootstrap: {bootstrap_percent}%"
     current_status = "connecting"
 elif tor_service:
     icon = "󰔟"
     text = "START"
     status_class = "tor-starting"
-    tooltip = "⏳ Tor service is starting..."
+    tooltip = "Tor service is starting..."
     current_status = "starting"
 else:
     icon = "󱎛 "
     text = "OFF"
     status_class = "tor-off"
-    tooltip = "🔓 Tor is not running\n🖱️ Click to start\n🌐 Direct connection"
+    tooltip = "Tor is not running\nClick to start\nDirect connection"
     current_status = "off"
 
 # Save current state

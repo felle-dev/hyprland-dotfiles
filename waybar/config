@@ -12,7 +12,7 @@
   "modules-right": ["pulseaudio","battery","bluetooth","backlight","network","custom/torstatus","custom/vpn","memory","custom/cpugraph","tray","custom/power"],
 
   "custom/weather": {
-        "exec": "~/.config/waybar/weather.py",
+        "exec": "~/.config/waybar/weather.sh",
         "return-type": "json",
         "interval": 1800,
 	"restart-interval": 60,
@@ -20,23 +20,23 @@
     },
 
     "custom/torstatus": {
-        "exec": "~/.config/waybar/tor-status.py",
+        "exec": "~/.config/waybar/tor-status.sh",
 	"return-type": "json",
     	"interval": 5,
-    	"on-click": "~/.config/waybar/tor-status.py toggle",
+    	"on-click": "~/.config/waybar/tor-status.sh toggle",
     	"format": "{}",
     	"tooltip": true
     },
 
   "custom/internetspeed": {
         "format": "{}",
-        "exec": "$HOME/.config/waybar/internet-speed.py",
+        "exec": "$HOME/.config/waybar/internet-speed.sh",
         "return-type": "json",
 	"interval":2,
    },
 
    "custom/cpugraph": {
-        "exec": "~/.config/waybar/cpu-graph.py",
+        "exec": "~/.config/waybar/cpu-graph.sh",
         "return-type": "json",
         "interval": 2,
         "format": "{}"

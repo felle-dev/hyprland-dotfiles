@@ -176,13 +176,13 @@ fi
 
 # Determine status
 if [ "$tor_connected" = "true" ]; then
-    icon=" "
+    icon=" "
     text="TOR"
     status_class="tor-active"
     tooltip="Tor network is active\nYour traffic is anonymized\nProxy enabled"
     current_status="connected"
 elif [ "$tor_service" = "true" ] && [ "$bootstrap_percent" -gt 0 ]; then
-    icon=" "
+    icon=" "
     text="${bootstrap_percent}%"
     status_class="tor-connecting"
     tooltip="Tor is connecting...\nBootstrap: ${bootstrap_percent}%"

@@ -75,7 +75,7 @@ start_vpn() {
     COUNTRY_NAME=$(get_country_name "$COUNTRY_CODE")
     
     # Send connecting notification
-    notify-send -t 3000 -u normal "VPN Connecting" "Connecting to $COUNTRY_NAME..."
+    notify-send -t 3000 -u normal "VPN Connecting" "Connecting..."
     
     # Start the VPN
     sudo systemctl start "openvpn-client@${RANDOM_CONFIG}"

@@ -27,13 +27,3 @@ else
 fi
 echo ""
 
-echo -e "${YELLOW}Detecting your location...${NC}"
-# Get country information
-COUNTRY=$(curl -s --max-time 5 https://ipapi.co/country_name/)
-if [ -n "$COUNTRY" ]; then
-    echo -e "${GREEN}✓  You are based in: ${BOLD}$COUNTRY${NC}"
-else
-    echo -e "${RED}✗  Could not detect location${NC}"
-fi
-
-echo ""

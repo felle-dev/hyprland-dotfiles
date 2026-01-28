@@ -10,10 +10,10 @@ selected=$(echo -e "$entries" | wofi \
     --prompt "Power Menu" \
     --style ~/.config/wofi/power-menu.css \
     --width 300 \
-    --height 250 \
-    --hide-search true \
-    --cache-file /dev/null)
-
+    --height 300
+    # --hide-search true
+    # --cache-file /dev/null)
+)
 case $selected in
   " Shutdown")
     systemctl poweroff;;

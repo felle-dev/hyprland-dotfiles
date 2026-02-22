@@ -2,7 +2,7 @@
 
 # power-menu.sh with custom styling
 
-entries=" Shutdown\n󰜉 Reboot\n󰒲 Suspend\n Lock\n Logout"
+entries=" Shutdown\n Reboot\n Suspend\n Lock\n Logout"
 
 selected=$(echo -e "$entries" | wofi \
     --dmenu \
@@ -15,15 +15,15 @@ selected=$(echo -e "$entries" | wofi \
     # --cache-file /dev/null)
 )
 case $selected in
-  " Shutdown")
+  " Shutdown")
     systemctl poweroff;;
-  "󰜉 Reboot")
+  " Reboot")
     systemctl reboot;;
-  "󰒲 Suspend")
+  " Suspend")
     systemctl suspend;;
-  " Lock")
+  " Lock")
     hyprlock;;
-  " Logout")
+  " Logout")
     hyprctl dispatch exit;;
   *)
     exit 0;;
